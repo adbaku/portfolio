@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiyoso Bagus Kumolo - Portofolio Multi-Bahasa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Noto Sans JP', 'sans-serif'],
+                        jp: ['Noto Sans JP', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-shadow {
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 font-bold text-xl text-slate-900 group">
+                    <span class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center font-extrabold group-hover:scale-105 transition-transform">A</span>
+                    <span>Adiyoso<span class="text-brand-500">.</span></span>
+                </a>
+
+                <!-- Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#about" class="hover:text-brand-600 transition-colors" data-i18n="nav_about">Tentang</a>
+                    <a href="#experience" class="hover:text-brand-600 transition-colors" data-i18n="nav_exp">Pengalaman</a>
+                    <a href="#certificates" class="hover:text-brand-600 transition-colors" data-i18n="nav_cert">Sertifikat</a>
+                    <a href="#projects" class="hover:text-brand-600 transition-colors" data-i18n="nav_proj">Proyek</a>
+                </div>
+
+                <!-- Language Switcher Button (2 Bahasa: ID & JP) -->
+                <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-full border border-slate-200/80">
+                    <button id="lang-id-btn" onclick="switchLanguage('id')" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-500 text-white shadow-sm flex items-center gap-1.5">
+                        <span>🇮🇩</span>
+                        <span>ID</span>
+                    </button>
+                    <button id="lang-jp-btn" onclick="switchLanguage('jp')" class="px-3 py-1 rounded-full text-xs font-bold transition-all text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+                        <span>🇯🇵</span>
+                        <span>JP</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / TENTANG SECTION -->
+    <section id="about" class="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-brand-50/40 via-[#f8fafc] to-[#f8fafc]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Teks Hero (Kiri) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/70 text-brand-700 font-semibold text-xs border border-brand-200/50">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        <span data-i18n="hero_badge">Bersedia sebagai Pekerja Tokutei Ginou</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        <span data-i18n="hero_greeting">Halo, Saya</span> <span class="text-brand-500">Adiyoso</span>
+                    </h1>
+
+                    <!-- Box Teks Perkenalan -->
+                    <div class="bg-white/80 p-6 sm:p-7 rounded-3xl border border-slate-100 shadow-sm space-y-4">
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="hero_desc">
+                            Halo semua, Saya <strong class="text-slate-900 font-bold">Adiyoso Bagus Kumolo</strong>, biasa dipanggil Adi. Lulusan perguruan tinggi dengan gelar di bidang Agribisnis. Saat ini sedang mempersiapkan diri untuk bekerja di Jepang melalui jalur <strong class="text-brand-600 font-semibold">Tokutei Ginou</strong> di bidang pengolahan makanan.
+                        </p>
+                    </div>
+
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <!-- Diganti menjadi "Hubungi Saya" mengarah ke #contact -->
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-2xl shadow-lg shadow-brand-500/20 transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-regular fa-paper-plane text-xs"></i>
+                            <span data-i18n="hero_cta_contact">Hubungi Saya</span>
+                        </a>
+                        <a href="#certificates" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3.5 rounded-2xl border border-slate-200/80 shadow-sm transition-all">
+                            <i class="fa-solid fa-award text-brand-500"></i>
+                            <span data-i18n="hero_cta_cert">Lihat Sertifikat</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image & Stats Card (Kanan) -->
+                <div class="lg:col-span-5 space-y-5">
+                    <!-- Bingkai Foto Diri -->
+                    <div class="relative mx-auto max-w-sm rounded-[2.5rem] p-3 bg-white border-4 border-white glow-shadow shadow-xl">
+                        <div class="relative rounded-[2rem] overflow-hidden bg-slate-100 aspect-[4/5] flex items-center justify-center">
+                            <img src="img/Profil.jfif" alt="Adiyoso Bagus Kumolo" class="w-full h-full object-cover">
+                            
+                            <!-- Overlay Card pada Gambar -->
+                            <div class="absolute bottom-3 left-3 right-3 glass-card rounded-2xl p-3.5 border border-white/80 shadow-md">
+                                <span class="text-[10px] font-bold tracking-wider text-brand-600 uppercase block mb-0.5" data-i18n="profile_domicile">DOMISILI INDONESIA</span>
+                                <h2 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-wide">ADIYOSO BAGUS KUMOLO</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keterangan Stat dibawah Foto -->
+                    <div class="grid grid-cols-3 gap-3 max-w-sm mx-auto">
+                        <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-500">A2</div>
+                            <div class="text-[11px] font-semibold text-slate-400 mt-0.5">JFT BASIC</div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-500">4</div>
+                            <div class="text-[11px] font-semibold text-slate-400 mt-0.5" data-i18n="stat_projects">Proyek</div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm text-center">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-500">100%</div>
+                            <div class="text-[11px] font-semibold text-slate-400 mt-0.5" data-i18n="stat_quality">Komitmen & Kualitas</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES SECTION -->
+    <section id="experience" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-500 block mb-1" data-i18n="exp_subtitle">KARIR & KEAHLIAN</span>
+                <h3 class="text-3xl font-extrabold text-slate-900" data-i18n="exp_title">Pengalaman Kerja & Pelatihan</h3>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Exp 1 -->
+                <div class="bg-[#f8fafc] p-6 sm:p-7 rounded-2xl border border-slate-100/80 hover:border-brand-200 transition-all">
+                    <div class="flex items-start gap-4 mb-2">
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 border border-brand-100 flex items-center justify-center font-bold text-sm shrink-0">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug" data-i18n="exp1_role">Subtitle Translator & Data Annotator</h4>
+                            <p class="text-xs font-semibold text-brand-500 mt-0.5" data-i18n="exp1_time">(2026 – Sekarang) Freelance</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-0 sm:pl-14" data-i18n="exp1_desc">
+                        Menjalankan pekerjaan lepas sebagai penerjemah subtitle dan data annotator dengan fokus pada ketelitian, tenggat waktu, dan kualitas hasil kerja.
+                    </p>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="bg-[#f8fafc] p-6 sm:p-7 rounded-2xl border border-slate-100/80 hover:border-brand-200 transition-all">
+                    <div class="flex items-start gap-4 mb-2">
+                        <div class="w-10 h-10 rounded-xl bg-white p-1.5 border border-slate-100 shadow-sm flex items-center justify-center shrink-0">
+                            <img src="img/Logo-Kemnaker.png" alt="Kemnaker Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug" data-i18n="exp2_role">Peserta Pelatihan Vokasi Nasional</h4>
+                            <p class="text-xs font-semibold text-brand-500 mt-0.5" data-i18n="exp2_time">(Agustus 2026) BLK Jasa dan Pariwisata Jateng - Pengolahan Makanan Komersial</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-0 sm:pl-14" data-i18n="exp2_desc">
+                        Mengikuti pelatihan vokasi pengolahan makanan untuk mengasah keterampilan produksi yang higienis, efisien, dan sesuai standar industri.
+                    </p>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="bg-[#f8fafc] p-6 sm:p-7 rounded-2xl border border-slate-100/80 hover:border-brand-200 transition-all">
+                    <div class="flex items-start gap-4 mb-2">
+                        <div class="w-10 h-10 rounded-xl bg-white p-1.5 border border-slate-100 shadow-sm flex items-center justify-center shrink-0">
+                            <img src="img/Logo-Tunas Agro.png" alt="Tunas Agro Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug" data-i18n="exp3_role">Asisten Pengawas Lahan</h4>
+                            <p class="text-xs font-semibold text-brand-500 mt-0.5" data-i18n="exp3_time">(2023 – 2025) PT. Tunas Agro Persada - Pertanian</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed pl-0 sm:pl-14" data-i18n="exp3_desc">
+                        Berperan dalam mengawasi kondisi lahan dan pertumbuhan tanaman guna memastikan hasil panen tetap optimal dan sesuai standar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="py-16 bg-[#f8fafc]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-500 block mb-1" data-i18n="cert_subtitle">KUALIFIKASI RESMI</span>
+                <h3 class="text-3xl font-extrabold text-slate-900" data-i18n="cert_title">Sertifikat Profesional</h3>
+                <div class="w-10 h-1 bg-brand-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-500 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-slate-900 leading-snug" data-i18n="cert1_name">SSW Pengolahan Makanan</h4>
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-emerald-800 text-xs font-semibold" data-i18n="cert1_status">
+                                Status: Lulus • Skor 139
+                            </span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('cert1')" class="mt-6 w-full py-2.5 px-4 rounded-xl border border-slate-200 text-brand-600 hover:bg-brand-50 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-eye"></i>
+                        <span data-i18n="cert_btn">Lihat Sertifikat</span>
+                    </button>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-500 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-slate-900 leading-snug" data-i18n="cert2_name">JFT Basic A2</h4>
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-emerald-800 text-xs font-semibold" data-i18n="cert2_status">
+                                Status: Lulus • Skor 242
+                            </span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('cert2')" class="mt-6 w-full py-2.5 px-4 rounded-xl border border-slate-200 text-brand-600 hover:bg-brand-50 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-eye"></i>
+                        <span data-i18n="cert_btn">Lihat Sertifikat</span>
+                    </button>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-50 text-brand-500 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-slate-900 leading-snug" data-i18n="cert3_name">Pelatihan Pengolahan Makanan</h4>
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold" data-i18n="cert3_status">
+                                Status: Lulus Pelatihan
+                            </span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('cert3')" class="mt-6 w-full py-2.5 px-4 rounded-xl border border-slate-200 text-brand-600 hover:bg-brand-50 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-eye"></i>
+                        <span data-i18n="cert_btn">Lihat Sertifikat</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-500 block mb-1" data-i18n="proj_subtitle">PORTOFOLIO PRAKTEK</span>
+                <h3 class="text-3xl font-extrabold text-slate-900" data-i18n="proj_title">Proyek</h3>
+                <div class="w-10 h-1 bg-brand-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Layout 2 Kolom di Layar Desktop -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Proyek 1: Memasak : Main Course -->
+                <div class="space-y-4 group bg-[#f8fafc] p-5 rounded-3xl border border-slate-100">
+                    <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 shadow-sm border border-slate-100 group/carousel">
+                        <div id="slider-0" class="flex transition-transform duration-500 ease-out h-full w-full">
+                            <img src="img/Steak1.jpeg" alt="Main Course 1" class="w-full h-full object-cover shrink-0">
+                            <img src="img/Steak2.jpg"  alt="Main Course 2" class="w-full h-full object-cover shrink-0">
+                        </div>
+                        <button onclick="prevSlide(0)" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(0)" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            <span id="dot-0-0" class="w-2 h-2 rounded-full bg-white transition-all"></span>
+                            <span id="dot-0-1" class="w-2 h-2 rounded-full bg-white/50 transition-all"></span>
+                        </div>
+                    </div>
+                    <div class="space-y-1.5 px-1">
+                        <h4 class="text-xl font-bold text-slate-900" data-i18n="proj1_title">Memasak : Main Course</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="proj1_desc">
+                            Mengolah dan menyajikan hidangan main course berupa Beef Steak with Mushroom Sauce & Mashed Potato dengan memperhatikan resep dan teknik memasak.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Proyek 2: Hidroponik Sayur -->
+                <div class="space-y-4 group bg-[#f8fafc] p-5 rounded-3xl border border-slate-100">
+                    <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 shadow-sm border border-slate-100 group/carousel">
+                        <div id="slider-1" class="flex transition-transform duration-500 ease-out h-full w-full">
+                            <img src="img/HP1.jpg" alt="Hidroponik Sayur 1" class="w-full h-full object-cover shrink-0">
+                            <img src="img/HP2.jpeg" alt="Hidroponik Sayur 2" class="w-full h-full object-cover shrink-0">
+                        </div>
+                        <button onclick="prevSlide(1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            <span id="dot-1-0" class="w-2 h-2 rounded-full bg-white transition-all"></span>
+                            <span id="dot-1-1" class="w-2 h-2 rounded-full bg-white/50 transition-all"></span>
+                        </div>
+                    </div>
+                    <div class="space-y-1.5 px-1">
+                        <h4 class="text-xl font-bold text-slate-900" data-i18n="proj2_title">Hidroponik Sayur</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="proj2_desc">
+                            Membudidayakan sawi dan selada menggunakan teknik hidroponik sebagai proyek eksperimen pertanian modern yang efisien dan ramah lingkungan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Japanese Subtitle Translator -->
+                <div class="space-y-4 group bg-[#f8fafc] p-5 rounded-3xl border border-slate-100">
+                    <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 shadow-sm border border-slate-100 group/carousel">
+                        <div id="slider-2" class="flex transition-transform duration-500 ease-out h-full w-full">
+                            <img src="img/CC1.JPG" alt="Japanese Subtitle 1" class="w-full h-full object-cover shrink-0">
+                            <img src="img/CC2.JPG" alt="Japanese Subtitle 2" class="w-full h-full object-cover shrink-0">
+                        </div>
+                        <button onclick="prevSlide(2)" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(2)" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            <span id="dot-2-0" class="w-2 h-2 rounded-full bg-white transition-all"></span>
+                            <span id="dot-2-1" class="w-2 h-2 rounded-full bg-white/50 transition-all"></span>
+                        </div>
+                    </div>
+                    <div class="space-y-1.5 px-1">
+                        <h4 class="text-xl font-bold text-slate-900" data-i18n="proj3_title">Japanese Subtitle Translator</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="proj3_desc">
+                            Menggarap proyek penerjemahan subtitle untuk berbagai judul film dan drama Jepang sebagai bentuk pengembangan kemampuan bahasa dan linguistik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Proyek 4: Pembuatan Roti -->
+                <div class="space-y-4 group bg-[#f8fafc] p-5 rounded-3xl border border-slate-100">
+                    <div class="relative h-64 rounded-2xl overflow-hidden bg-slate-200 shadow-sm border border-slate-100 group/carousel">
+                        <div id="slider-3" class="flex transition-transform duration-500 ease-out h-full w-full">
+                            <img src="img/Roti.jpg" alt="Membuat Roti 1" class="w-full h-full object-cover shrink-0">
+                            <img src="img/Roti2.jpg" alt="Membuat Roti 2" class="w-full h-full object-cover shrink-0">
+                        </div>
+                        <button onclick="prevSlide(3)" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide(3)" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-800 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-md">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            <span id="dot-3-0" class="w-2 h-2 rounded-full bg-white transition-all"></span>
+                            <span id="dot-3-1" class="w-2 h-2 rounded-full bg-white/50 transition-all"></span>
+                        </div>
+                    </div>
+                    <div class="space-y-1.5 px-1">
+                        <h4 class="text-xl font-bold text-slate-900" data-i18n="proj4_title">Pembuatan Roti</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-i18n="proj4_desc">
+                            Praktik pengolahan adonan dan pembuatan roti baguette dan sweet bread dengan menerapkan teknik pencampuran dan proses pemanggang yang tepat.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT BANNER SECTION -->
+    <section id="contact" class="py-16 bg-[#f8fafc]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative bg-gradient-to-br from-[#1ea2f1] to-[#0871cc] rounded-[2.5rem] p-8 sm:p-14 text-center text-white overflow-hidden shadow-xl">
+                
+                <!-- Watermarks -->
+                <div class="absolute -top-6 -left-6 opacity-10 pointer-events-none font-jp text-7xl font-bold tracking-widest text-white whitespace-nowrap">
+                    お問い合わせ
+                </div>
+                <div class="absolute -bottom-10 -right-6 opacity-10 pointer-events-none font-jp text-8xl font-bold tracking-widest text-white whitespace-nowrap">
+                    連絡先
+                </div>
+
+                <div class="relative z-10 space-y-6">
+                    <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest border border-white/30 text-white shadow-sm" data-i18n="contact_badge">
+                        KONTAK
+                    </div>
+
+                    <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight" data-i18n="contact_title">
+                        Mari Bekerja Sama!
+                    </h3>
+
+                    <p class="text-white/90 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed" data-i18n="contact_desc">
+                        Saya siap berkontribusi dalam industri pengolahan makanan maupun kesempatan profesional lainnya. Silakan hubungi saya melalui saluran di bawah ini.
+                    </p>
+
+                    <!-- Contact Cards Container -->
+                    <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                        <!-- Email Card -->
+                        <a href="mailto:adiyosobagus@gmail.com" class="bg-white/15 hover:bg-white/25 border border-white/20 backdrop-blur-md rounded-2xl p-5 text-center transition-all group">
+                            <div class="w-10 h-10 rounded-full bg-white text-[#0871cc] flex items-center justify-center mx-auto mb-3 shadow-md group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </div>
+                            <div class="text-[11px] font-medium text-white/80">Email</div>
+                            <div class="text-xs font-bold text-white mt-0.5 truncate">adiyosobagus@gmail.com</div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/adiyosobagus/" target="_blank" rel="noopener noreferrer" class="bg-white/15 hover:bg-white/25 border border-white/20 backdrop-blur-md rounded-2xl p-5 text-center transition-all group">
+                            <div class="w-10 h-10 rounded-full bg-white text-[#0871cc] flex items-center justify-center mx-auto mb-3 shadow-md group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-linkedin-in text-sm font-bold"></i>
+                            </div>
+                            <div class="text-[11px] font-medium text-white/80">LinkedIn</div>
+                            <div class="text-xs font-bold text-white mt-0.5 truncate">Adiyoso Bagus Kumolo</div>
+                        </a>
+
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/6281548132566" target="_blank" rel="noopener noreferrer" class="bg-white/15 hover:bg-white/25 border border-white/20 backdrop-blur-md rounded-2xl p-5 text-center transition-all group">
+                            <div class="w-10 h-10 rounded-full bg-white text-[#0871cc] flex items-center justify-center mx-auto mb-3 shadow-md group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-whatsapp text-sm font-bold"></i>
+                            </div>
+                            <div class="text-[11px] font-medium text-white/80">WhatsApp</div>
+                            <div class="text-xs font-bold text-white mt-0.5 truncate">081548132566</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-8 border-t border-slate-100 text-center text-slate-400 text-xs">
+        <div class="max-w-6xl mx-auto px-4">
+            <p data-i18n="footer_rights">© 2026 Adiyoso Bagus Kumolo. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- CERTIFICATE MODAL POPUP -->
+    <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl w-full max-w-[360px] sm:max-w-[420px] h-auto aspect-[1/1.414] p-5 relative shadow-2xl flex flex-col justify-between my-auto">
+            
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3 shrink-0">
+                <div class="pr-2">
+                    <h3 id="modalTitle" class="text-base font-bold text-slate-900 truncate">Sertifikat</h3>
+                    <p id="modalSub" class="text-xs text-slate-500 truncate"></p>
+                </div>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors shrink-0">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 my-3 flex-1 flex items-center justify-center p-2 min-h-0">
+                <img id="modalImg" src="" onerror="this.src='https://placehold.co/400x560/0ea5e9/ffffff?text=Pratinjau+Sertifikat'" alt="Pratinjau Sertifikat" class="w-full h-full object-contain rounded-xl">
+            </div>
+
+            <div class="flex justify-end pt-1 shrink-0">
+                <button onclick="closeModal()" class="px-6 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition-colors shadow-md" data-i18n="modal_close">
+                    Tutup
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MULTI-LANGUAGE & UI INTERACTION -->
+    <script>
+        // Multi-Language Dictionary Data (ID & JP)
+        const i18nData = {
+            id: {
+                nav_about: "Tentang",
+                nav_exp: "Pengalaman",
+                nav_cert: "Sertifikat",
+                nav_proj: "Proyek",
+                hero_badge: "Bersedia sebagai Pekerja Tokutei Ginou",
+                hero_greeting: "Halo, Saya",
+                hero_desc: "Halo semua, Saya <strong class=\"text-slate-900 font-bold\">Adiyoso Bagus Kumolo</strong>, biasa dipanggil Adi. Lulusan perguruan tinggi dengan gelar di bidang Agribisnis. Saat ini sedang mempersiapkan diri untuk bekerja di Jepang melalui jalur <strong class=\"text-brand-600 font-semibold\">Tokutei Ginou</strong> di bidang pengolahan makanan.",
+                hero_cta_contact: "Hubungi Saya",
+                hero_cta_cert: "Lihat Sertifikat",
+                profile_domicile: "DOMISILI INDONESIA",
+                stat_projects: "Proyek",
+                stat_quality: "Komitmen & Kualitas",
+                exp_subtitle: "KARIR & KEAHLIAN",
+                exp_title: "Pengalaman Kerja & Pelatihan",
+                exp1_role: "Subtitle Translator & Data Annotator",
+                exp1_time: "(2026 – Sekarang) Freelance",
+                exp1_desc: "Menjalankan pekerjaan lepas sebagai penerjemah subtitle dan data annotator dengan fokus pada ketelitian, tenggat waktu, dan kualitas hasil kerja.",
+                exp2_role: "Peserta Pelatihan Vokasi Nasional",
+                exp2_time: "(Agustus 2026) BLK Jasa dan Pariwisata Jateng - Pengolahan Makanan Komersial",
+                exp2_desc: "Mengikuti pelatihan vokasi pengolahan makanan untuk mengasah keterampilan produksi yang higienis, efisien, dan sesuai standar industri.",
+                exp3_role: "Asisten Pengawas Lahan",
+                exp3_time: "(2023 – 2025) PT. Tunas Agro Persada - Pertanian",
+                exp3_desc: "Berperan dalam mengawasi kondisi lahan dan pertumbuhan tanaman guna memastikan hasil panen tetap optimal dan sesuai standar.",
+                cert_subtitle: "KUALIFIKASI RESMI",
+                cert_title: "Sertifikat Profesional",
+                cert1_name: "SSW Pengolahan Makanan",
+                cert1_status: "Status: Lulus • Skor 139",
+                cert2_name: "JFT Basic A2",
+                cert2_status: "Status: Lulus • Skor 242",
+                cert3_name: "Pelatihan Pengolahan Makanan",
+                cert3_status: "Status: Lulus Pelatihan",
+                cert_btn: "Lihat Sertifikat",
+                proj_subtitle: "PORTOFOLIO PRAKTEK",
+                proj_title: "Proyek",
+                proj1_title: "Memasak : Main Course",
+                proj1_desc: "Mengolah dan menyajikan hidangan main course berupa Beef Steak with Mushroom Sauce & Mashed Potato dengan memperhatikan resep dan teknik memasak.",
+                proj2_title: "Hidroponik Sayur",
+                proj2_desc: "Membudidayakan sawi dan selada menggunakan teknik hidroponik sebagai proyek eksperimen pertanian modern yang efisien dan ramah lingkungan.",
+                proj3_title: "Japanese Subtitle Translator",
+                proj3_desc: "Menggarap proyek penerjemahan subtitle untuk berbagai judul film dan drama Jepang sebagai bentuk pengembangan kemampuan bahasa dan linguistik.",
+                proj4_title: "Pembuatan Roti",
+                proj4_desc: "Praktik pengolahan adonan dan pembuatan roti baguette dan sweet bread dengan menerapkan teknik pencampuran dan proses pemanggang yang tepat.",
+                contact_badge: "KONTAK",
+                contact_title: "Mari Bekerja Sama!",
+                contact_desc: "Saya siap berkontribusi dalam industri pengolahan makanan maupun kesempatan profesional lainnya. Silakan hubungi saya melalui saluran di bawah ini.",
+                footer_rights: "© 2026 Adiyoso Bagus Kumolo. Hak Cipta Dilindungi.",
+                modal_close: "Tutup"
+            },
+            jp: {
+                nav_about: "概要",
+                nav_exp: "経歴",
+                nav_cert: "資格",
+                nav_proj: "プロジェクト",
+                hero_badge: "特定技能（飲食料品製造業）対応可能",
+                hero_greeting: "こんにちは、私は",
+                hero_desc: "皆さん、こんにちは。私は<strong class=\"text-slate-900 font-bold\">アディヨソ・バグス・クモロ</strong>と申します。アディと呼ばれています。大学でアグリビジネスの学位を取得し卒業しました。現在、日本で<strong class=\"text-brand-600 font-semibold\">特定技能</strong>（食品製造業分野）として働くための準備を進めています。",
+                hero_cta_contact: "お問い合わせ",
+                hero_cta_cert: "資格証明を見る",
+                profile_domicile: "居住地：インドネシア",
+                stat_projects: "実績プロジェクト",
+                stat_quality: "責任感と品質",
+                exp_subtitle: "キャリア＆スキル",
+                exp_title: "職歴・訓練経歴",
+                exp1_role: "字幕翻訳者 兼 データアノテーター",
+                exp1_time: "(2026年 – 現在) フリーランス",
+                exp1_desc: "正確性、納期遵守、高品質を重視し、フリーランスとして字幕翻訳やデータアノテーション作業を担当しています。",
+                exp2_role: "国家職業訓練 受講生",
+                exp2_time: "(2026年8月) 中部ジャワ州立サービス・観光訓練所 - 商業食品加工",
+                exp2_desc: "衛生管理、効率的生産、業界基準に沿った専門スキルを習得するため、食品加工の職業訓練に参加しました。",
+                exp3_role: "農地管理アシスタント",
+                exp3_time: "(2023年 – 2025年) PT. Tunas Agro Persada - 農業分野",
+                exp3_desc: "最適な収穫量と基準の維持を目指し、農地の状況や作物の成長プロセスの監督・管理を担当しました。",
+                cert_subtitle: "公式資格",
+                cert_title: "保有資格・証明書",
+                cert1_name: "特定技能1号 (飲食料品製造業)",
+                cert1_status: "ステータス: 合格 • 得点 139",
+                cert2_name: "JFT Basic A2 (日本語テスト)",
+                cert2_status: "ステータス: 合格 • 得点 242",
+                cert3_name: "食品加工 職業訓練修了証",
+                cert3_status: "ステータス: 訓練課程修了",
+                cert_btn: "証明書を見る",
+                proj_subtitle: "実務ポートフォリオ",
+                proj_title: "プロジェクト",
+                proj1_title: "調理技能：メインコース",
+                proj1_desc: "調理法とレシピを正確に遵守し、ビーフステーキ（マッシュルームソース添え）とマッシュポテトを調理・提供しました。",
+                proj2_title: "水耕栽培プロジェクト",
+                proj2_desc: "効率的かつ環境に優しい現代農業の実践として、水耕栽培技術を用いて小松菜やレタスを栽培しました。",
+                proj3_title: "日本語字幕翻訳",
+                proj3_desc: "語学力と言語表現力を向上させるため、日本の映画やドラマの字幕翻訳プロジェクトに従事しました。",
+                proj4_title: "製パン実習",
+                proj4_desc: "適切な生地の捏ね作業と焼き上げ工程を適用し、バゲットやスイートブレッドの製パン技術を実践しました。",
+                contact_badge: "お問い合わせ",
+                contact_title: "一緒に働きましょう！",
+                contact_desc: "飲食料品製造業をはじめとする様々な機会で貢献する準備が整っています。以下の連絡先よりお気軽にご連絡ください。",
+                footer_rights: "© 2026 アディヨソ・バグス・クモロ. All Rights Reserved.",
+                modal_close: "閉じる"
+            }
+        };
+
+        // Certificate metadata map for Modal
+        const certDataMap = {
+            cert1: {
+                id: { title: "SSW Pengolahan Makanan", sub: "Skor 139 • Sertifikat SSW Pengolahan Makanan" },
+                jp: { title: "特定技能1号 (飲食料品製造業)", sub: "得点 139 • 飲食料品製造業特定技能評価試験証明書" },
+                img: "img/SERTIFIKAT SSW PM.jpg"
+            },
+            cert2: {
+                id: { title: "JFT Basic A2", sub: "Lulus • Skor 242 • Sertifikat Bahasa Jepang" },
+                jp: { title: "JFT Basic A2", sub: "合格 • 得点 242 • 国際交流基金日本語基礎テスト" },
+                img: "img/SERTIFIKAT JFT.jpg"
+            },
+            cert3: {
+                id: { title: "Pelatihan Pengolahan Makanan", sub: "Sertifikat Kelulusan Pelatihan Vokasi Nasional" },
+                jp: { title: "食品加工 職業訓練修了証", sub: "国家職業訓練修了証明書" },
+                img: "img/SERTIFIKAT KELULUSAN PELATIHAN.jpg"
+            }
+        };
+
+        let currentLang = 'id';
+        let currentCertKey = null;
+
+        // Switcher Function
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18nData[lang] && i18nData[lang][key]) {
+                    el.innerHTML = i18nData[lang][key];
+                }
+            });
+
+            // Toggle language button styling
+            const btnId = document.getElementById('lang-id-btn');
+            const btnJp = document.getElementById('lang-jp-btn');
+
+            if (lang === 'id') {
+                btnId.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-500 text-white shadow-sm flex items-center gap-1.5";
+                btnJp.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+            } else {
+                btnJp.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-brand-500 text-white shadow-sm flex items-center gap-1.5";
+                btnId.className = "px-3 py-1 rounded-full text-xs font-bold transition-all text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+            }
+
+            // Update modal text if modal is active
+            if (currentCertKey && certDataMap[currentCertKey]) {
+                const data = certDataMap[currentCertKey][currentLang];
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalSub').innerText = data.sub;
+            }
+        }
+
+        // Modal logic
+        function openModal(certKey) {
+            currentCertKey = certKey;
+            const cert = certDataMap[certKey];
+            if (cert) {
+                const langInfo = cert[currentLang];
+                document.getElementById('modalTitle').innerText = langInfo.title;
+                document.getElementById('modalSub').innerText = langInfo.sub;
+                document.getElementById('modalImg').src = cert.img;
+                document.getElementById('certModal').classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('certModal').classList.add('hidden');
+            currentCertKey = null;
+        }
+
+        document.getElementById('certModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Carousel Slider logic
+        const currentSlides = [0, 0, 0, 0];
+
+        function updateSlider(index) {
+            const slider = document.getElementById(`slider-${index}`);
+            const slidePos = currentSlides[index];
+            slider.style.transform = `translateX(-${slidePos * 100}%)`;
+
+            // Update indicators
+            for (let i = 0; i < 2; i++) {
+                const dot = document.getElementById(`dot-${index}-${i}`);
+                if (i === slidePos) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white');
+                } else {
+                    dot.classList.remove('bg-white');
+                    dot.classList.add('bg-white/50');
+                }
+            }
+        }
+
+        function nextSlide(index) {
+            currentSlides[index] = (currentSlides[index] + 1) % 2;
+            updateSlider(index);
+        }
+
+        function prevSlide(index) {
+            currentSlides[index] = (currentSlides[index] - 1 + 2) % 2;
+            updateSlider(index);
+        }
+    </script>
+</body>
+</html>
